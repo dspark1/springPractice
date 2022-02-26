@@ -16,14 +16,14 @@ public class AfterThrowingAdvice {
 	@AfterThrowing(pointcut = "PointcutCommon.allPointcut()", throwing = "expectObj")
 	public void exceptionLog(JoinPoint jp, Exception expectObj) {
 		String method = jp.getSignature().getName();
-		System.out.println(method + "() ¸Ş¼Òµå ¼öÇà Áß ¿¹¿Ü ¹ß»ı!");
+		System.out.println(method + "() ë©”ì†Œë“œ ìˆ˜í–‰ ì¤‘ ì˜ˆì™¸ ë°œìƒ!");
 		
 		if(expectObj instanceof IllegalArgumentException) {
-			System.out.println("ºÎÀûÇÕÇÑ °ªÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù.");
+			System.out.println("ë¶€ì í•©í•œ ê°’ì´ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		} else if(expectObj instanceof NumberFormatException) {
-			System.out.println("¼ıÀÚ Çü½ÄÀÇ °ªÀÌ ¾Æ´Õ´Ï´Ù.");
+			System.out.println("ìˆ«ì í˜•ì‹ì˜ ê°’ì´ ì•„ë‹™ë‹ˆë‹¤.");
 		} else if(expectObj instanceof Exception) {
-			System.out.println("¹®Á¦°¡ ¹ß»ıÇß½À´Ï´Ù.");
+			System.out.println("ë¬¸ì œê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
 		}
 	}
 }

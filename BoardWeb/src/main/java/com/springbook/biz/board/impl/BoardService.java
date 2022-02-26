@@ -6,24 +6,24 @@ import com.springbook.biz.board.BoardVO;
 
 public interface BoardService {
 
-	//	CRUD ±â´ÉÀÇ ¸Ş¼Òµå ±¸Çö 
-	//	±Û µî·Ï
+	//	CRUD ê¸°ëŠ¥ì˜ ë©”ì†Œë“œ êµ¬í˜„ 
+	//	ê¸€ ë“±ë¡
 	void insertBoard(BoardVO vo);
 
-	//	CRUD ±â´ÉÀÇ ¸Ş¼Òµå ±¸Çö 
-	//	±Û ¼öÁ¤
+	//	CRUD ê¸°ëŠ¥ì˜ ë©”ì†Œë“œ êµ¬í˜„ 
+	//	ê¸€ ìˆ˜ì •
 	void updateBoard(BoardVO vo);
 
-	//	CRUD ±â´ÉÀÇ ¸Ş¼Òµå ±¸Çö 
-	//	±Û »èÁ¦
+	//	CRUD ê¸°ëŠ¥ì˜ ë©”ì†Œë“œ êµ¬í˜„ 
+	//	ê¸€ ì‚­ì œ
 	void deleteBoard(BoardVO vo);
 
-	//	CRUD ±â´ÉÀÇ ¸Ş¼Òµå ±¸Çö 
-	//	±Û »ó¼¼ Á¶È¸
+	//	CRUD ê¸°ëŠ¥ì˜ ë©”ì†Œë“œ êµ¬í˜„ 
+	//	ê¸€ ìƒì„¸ ì¡°íšŒ
 	BoardVO getBoard(BoardVO vo);
 
-	//	CRUD ±â´ÉÀÇ ¸Ş¼Òµå ±¸Çö 
-	//	±Û ¸ñ·Ï Á¶È¸
+	//	CRUD ê¸°ëŠ¥ì˜ ë©”ì†Œë“œ êµ¬í˜„ 
+	//	ê¸€ ëª©ë¡ ì¡°íšŒ
 	List<BoardVO> getBoardList(BoardVO vo);
 
 }

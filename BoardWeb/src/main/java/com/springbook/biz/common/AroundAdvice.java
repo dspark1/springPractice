@@ -21,7 +21,7 @@ public class AroundAdvice {
 		Object obj = pjp.proceed();
 		
 		stopWatch.stop();
-		System.out.println(method + "() ¸Ş¼Òµå ¼öÇà¿¡ °É¸° ½Ã°£ : " + stopWatch.getTotalTimeMillis() + "(ms)ÃÊ");
+		System.out.println(method + "() ë©”ì†Œë“œ ìˆ˜í–‰ì— ê±¸ë¦° ì‹œê°„ : " + stopWatch.getTotalTimeMillis() + "(ms)ì´ˆ");
 		
 		return obj;
 	}
