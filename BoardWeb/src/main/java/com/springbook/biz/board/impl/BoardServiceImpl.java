@@ -14,12 +14,15 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private BoardDAO boardDAO;
 	
+	@Autowired
+	private BoardDAOSpring boardDAOSpring;
+	
 	@Override
 	public void insertBoard(BoardVO vo) {
-		if(vo.getSeq() == 0) {
-			throw new IllegalArgumentException("0번 글은 등록할 수 없습니다");
-		}
-		boardDAO.insertBoard(vo);
+//		if(vo.getSeq() == 0) {
+//			throw new IllegalArgumentException("0번 글은 등록할 수 없습니다");
+//		}
+		boardDAOSpring.insertBoard(vo);
 		
 	}
 
@@ -42,6 +45,6 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public List<BoardVO> getBoardList(BoardVO vo) {
-		return boardDAO.getBoardList(vo);
+		return boardDAOSpring.getBoardList(vo);
 	}
 }
