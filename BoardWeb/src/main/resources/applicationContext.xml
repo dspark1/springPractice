@@ -4,40 +4,18 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
-=======
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
->>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
-=======
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
->>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
-=======
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
->>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
-
 	
 	<context:component-scan base-package="com.springbook.biz">
 	</context:component-scan>
 
 	<!-- DataSource 설정 -->
 	<context:property-placeholder location="classpath:config/database.properties" />
-	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 						destroy-method="close">
 						
@@ -50,27 +28,8 @@
 		<property name="url" value="jdbc2:h2:tcp://localhost/~/test"></property>
 		<property name="username" value="sa"></property>
 		<property name="password" value=""></property>					 -->
-=======
-=======
->>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
-=======
->>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
-	<bean id="log" class="com.springbook.biz.common.LogAdvice"></bean>
-	<aop:config>
-		<aop:pointcut id="allPointcut"
-						expression="execution(* com.springbook.biz..*Impl.*(..))"/>
-		<aop:pointcut id="getPointcut"
-						expression="execution(* com.springbook.biz..*Impl.get*(..))"/>
-						
-		<aop:aspect ref="log">
-			<aop:after pointcut-ref="getPointcut" method="printLog"/>
-		</aop:aspect>
-	</aop:config>
-	<!-- 
-	<bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl">
-		<property name="userDAO" ref="userDAO" />
->>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
 	</bean>
+
 	
 	<!-- Spring JDBC 설정 -->
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
