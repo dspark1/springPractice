@@ -147,6 +147,7 @@
         </dependency>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         <!-- JDBCTemplate-->
 		<dependency>
@@ -161,6 +162,8 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
 		</dependency>       	
+=======
+>>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
 =======
 >>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
 =======
