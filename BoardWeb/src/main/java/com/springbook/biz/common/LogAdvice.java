@@ -1,17 +1,8 @@
 package com.springbook.biz.common;
 
 public class LogAdvice {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
-=======
->>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
-=======
->>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
-=======
->>>>>>> aeb7f40b32ad1a2ac32a827a3c80864c0c69206a
+
 	public void printLog() {
-		System.out.println("[°øÅë ·Î±×] ºñÁî´Ï½º ·ÎÁ÷ ¼öÇà Àü µ¿ÀÛ");
+		System.out.println("[ï¿½ï¿½ï¿½ï¿½ ï¿½Î±ï¿½] ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 	}
 }
