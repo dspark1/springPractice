@@ -10,7 +10,7 @@ import com.springbook.biz.common.JDBCUtil;
 import com.springbook.biz.user.UserVO;
 
 //	DAO(Data Access Object)
-@Repository("UserDAO")
+@Repository("userDAO")
 public class UserDAO {
 	//	JDBC 관련 변수 
 	private Connection conn = null;
@@ -25,12 +25,18 @@ public class UserDAO {
 	public UserVO getUser(UserVO vo) {
 		UserVO user = null;
 		try {
-			System.out.println("===> JDBC로 getUser() 기능 처리");
+			System.out.println("===> JDBC로 getUser() 기능 처리1");
 			conn = JDBCUtil.getConnection();
+			System.out.println("===> JDBC로 getUser() 기능 처리2");
+			System.out.println("conn => "+conn);
 			stmt = conn.prepareStatement(USER_GET);
+			System.out.println("===> JDBC로 getUser() 기능 처리3");
+			
 			stmt.setString(1, vo.getId());
 			stmt.setString(2, vo.getPassword());
 			rs = stmt.executeQuery();
+			System.out.println("===> JDBC로 getUser() 기능 처리4");
+			
 			if(rs.next()) {
 				user = new UserVO();
 				user.setId(rs.getString("ID"));
@@ -38,6 +44,8 @@ public class UserDAO {
 				user.setName(rs.getString("NAME"));
 				user.setRole(rs.getString("ROLE"));
 			}
+			System.out.println("===> JDBC로 getUser() 기능 처리5");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
